@@ -80,7 +80,7 @@
     .world-text h2{font-size:clamp(2.8rem,4.3vw,4.6rem);line-height:1.04;margin:18px 0 24px}
     .world-text p:not(.eyebrow){color:var(--muted);line-height:1.75;max-width:490px}
     .world-rule{display:flex;gap:16px;align-items:start;padding-top:22px;margin-top:25px;border-top:1px solid var(--line);font-family:Georgia,serif;font-size:1.2rem;color:var(--paper)}
-    .world-rule::before{content:"✦";color:var(--gold);font-size:1rem}
+    .world-rule::before{content:"?";color:var(--gold);font-size:1rem}
     .closing{padding:110px 0 120px;text-align:center;background:radial-gradient(ellipse at 50% 0%,#233a2b,#101915 65%)}
     .closing h2{max-width:800px;margin:16px auto 22px;font-size:clamp(3.1rem,6.5vw,6.5rem);line-height:.99}
     .closing p:not(.eyebrow){max-width:590px;margin:0 auto 31px;color:var(--muted);line-height:1.7}
@@ -101,29 +101,34 @@
     .modal-section p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.7}
     .modal-section p+p{margin-top:10px}
     .modal-foot{padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:.82rem}
-    .roadmap-row{display:grid;grid-template-columns:94px 1fr;gap:17px;align-items:start;padding:15px 0;border-top:1px solid var(--line)}
-    .roadmap-row:first-child{border-top:0}
-    .roadmap-state{width:max-content;max-width:100%;border:1px solid var(--line);border-radius:30px;padding:4px 8px;color:var(--muted);font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-align:center}
-    .roadmap-state.done{border-color:rgba(171,199,159,.5);color:#bad5ac}
-    .roadmap-state.active{border-color:rgba(214,173,114,.55);color:var(--gold)}
-    .roadmap-row strong{display:block;font-family:Georgia,serif;font-size:1.13rem;font-weight:400}
-    .roadmap-row p{margin:4px 0 0;color:var(--muted);font-size:.84rem;line-height:1.55}
+    .devlog-edition{border-top:1px solid var(--line)}
+    .devlog-edition summary{position:relative;display:block;padding:24px 34px 24px 0;cursor:pointer;list-style:none}
+    .devlog-edition summary::-webkit-details-marker{display:none}
+    .devlog-edition summary::after{content:'+';position:absolute;right:2px;top:34px;color:var(--gold);font-size:1.4rem}
+    .devlog-edition[open] summary::after{content:'-'}
+    .devlog-date{display:block;margin-bottom:9px;color:var(--gold);font-size:.69rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+    .devlog-edition h3{margin:0;font-family:Georgia,serif;font-size:clamp(1.45rem,3vw,1.85rem);font-weight:400;line-height:1.22}
+    .devlog-copy{padding-bottom:30px}
+    .devlog-copy p{margin:0 0 16px;color:#c6d0c2;font-size:.96rem;line-height:1.85}
+    .devlog-copy p:last-child{margin-bottom:0}
+    .devlog-copy strong{color:var(--paper);font-weight:600}
+    .devlog-copy .devlog-progress{border-left:2px solid var(--gold);padding-left:16px;color:var(--muted);font-size:.86rem}
     footer{border-top:1px solid var(--line);padding:30px 0;color:#9aa99c;font-size:.79rem}
     .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
     .footer-inner a:hover{color:var(--gold)}
     @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:0;padding-top:165px;padding-bottom:70px}.hero{min-height:0}.hero-art{width:min(780px,100%);margin:40px auto 0}.idea-grid{grid-template-columns:1fr;gap:10px}.idea .quote-mark{font-size:6rem}.world-grid,.scenario-grid{gap:42px}.pillar{padding-right:19px}.pillar + .pillar{padding-left:19px}}
-    @media(max-width:660px){.wrap{width:min(calc(100% - 36px),var(--max))}.nav-inner{min-height:66px}.brand{font-size:1rem}.nav-links{gap:14px;font-size:.75rem}.nav-links a:not(.nav-cta){display:none}.nav-links .nav-cta{padding:8px 10px}.hero-grid{padding-top:139px}.hero-copy{min-width:0}.hero h1{font-size:clamp(4rem,18vw,6.5rem)}.hero-art{margin-top:10px}.art-caption{display:block}.section{padding:74px 0}.section-heading{margin-bottom:34px}.pillars,.scenario-grid,.world-grid{grid-template-columns:1fr}.pillar,.pillar + .pillar{min-height:0;padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}.pillar:last-child{border:0}.pillar h3{margin:20px 0 12px}.world-frame{min-height:0}.world-text{order:-1}.closing{padding:80px 0 90px}.footer-inner{align-items:flex-start;flex-direction:column}.roadmap-row{grid-template-columns:1fr;gap:7px}}
+    @media(max-width:660px){.wrap{width:min(calc(100% - 36px),var(--max))}.nav-inner{min-height:66px}.brand{font-size:1rem}.nav-links{gap:14px;font-size:.75rem}.nav-links a:not(.nav-cta){display:none}.nav-links .nav-cta{padding:8px 10px}.hero-grid{padding-top:139px}.hero-copy{min-width:0}.hero h1{font-size:clamp(4rem,18vw,6.5rem)}.hero-art{margin-top:10px}.art-caption{display:block}.section{padding:74px 0}.section-heading{margin-bottom:34px}.pillars,.scenario-grid,.world-grid{grid-template-columns:1fr}.pillar,.pillar + .pillar{min-height:0;padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}.pillar:last-child{border:0}.pillar h3{margin:20px 0 12px}.world-frame{min-height:0}.world-text{order:-1}.closing{padding:80px 0 90px}.footer-inner{align-items:flex-start;flex-direction:column}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
   </style>
 </head>
 <body>
   <header class="nav">
     <div class="wrap nav-inner">
-      <a class="brand" href="#inicio" aria-label="Kingdom, voltar ao início"><span class="brand-mark" aria-hidden="true">✦</span> Kingdom</a>
+      <a class="brand" href="#inicio" aria-label="Kingdom, voltar ao início"><span class="brand-mark" aria-hidden="true">?</span> Kingdom</a>
       <nav class="nav-links" aria-label="Navegação principal">
         <a href="#ideia">A ideia</a>
         <a href="#mundo">O mundo</a>
-        <a class="nav-cta" href="#descobrir">Descobrir o projeto ↗</a>
+        <a class="nav-cta" href="#descobrir">Descobrir o projeto ?</a>
       </nav>
     </div>
   </header>
@@ -137,7 +142,7 @@
           <p class="hero-lead">Construa um reino. Conviva com as consequências.</p>
           <p class="hero-sub">Uma ilha no céu. Cinco pessoas para começar. Casas e muralhas para desenhar. Pessoas com vontade própria. Cada morador tem suas necessidades, seus planos e sua própria maneira de enxergar o mundo.</p>
           <div class="actions">
-            <a class="button" href="#ideia">Conheça a ideia <span aria-hidden="true">↘</span></a>
+            <a class="button" href="#ideia">Conheça a ideia <span aria-hidden="true">?</span></a>
             <a class="button alt" href="#historia">Veja uma história possível</a>
           </div>
           <div class="hero-note">Um reino feito de pessoas e escolhas</div>
@@ -201,7 +206,7 @@
     </section>
 
     <section class="closing" id="descobrir" aria-labelledby="closing-title">
-      <div class="wrap"><p class="eyebrow">Kingdom · em desenvolvimento</p><h2 class="serif" id="closing-title">Que histórias podem nascer no reino que você constrói?</h2><p>Kingdom está sendo construído passo a passo, começando por uma ilha pequena e seus habitantes. Explore a visão e acompanhe o caminho do projeto.</p><button class="button" type="button" data-open-modal="visao-modal" aria-haspopup="dialog">Leia a visão do jogo ↗</button><button class="button alt" type="button" data-open-modal="roadmap-modal" aria-haspopup="dialog">Conheça os próximos passos ↗</button></div>
+      <div class="wrap"><p class="eyebrow">Kingdom · em desenvolvimento</p><h2 class="serif" id="closing-title">Que histórias podem nascer no reino que você constrói?</h2><p>Kingdom está sendo construído passo a passo, começando por uma ilha pequena e seus habitantes. Explore a visão e acompanhe o desenvolvimento, semana a semana.</p><button class="button" type="button" data-open-modal="visao-modal" aria-haspopup="dialog">Leia a visão do jogo ?</button><button class="button alt" type="button" data-open-modal="devlog-modal" aria-haspopup="dialog">Leia o devlog semanal ?</button></div>
     </section>
   </main>
 
@@ -220,19 +225,64 @@
     </div>
   </dialog>
 
-  <dialog class="info-modal" id="roadmap-modal" aria-labelledby="roadmap-title">
+  <dialog class="info-modal" id="devlog-modal" aria-labelledby="devlog-title">
     <div class="modal-inner">
-      <div class="modal-top"><p class="eyebrow">O caminho até agora</p><button class="modal-close" type="button" data-close-modal aria-label="Fechar próximos passos" autofocus>×</button></div>
-      <h2 class="serif" id="roadmap-title">De um pequeno abrigo a um reino com história.</h2>
-      <p class="modal-lead">Kingdom começa com poucos habitantes e cresce aos poucos. Algumas experiências já podem ser encontradas no jogo; outras ainda estão sendo construídas ou fazem parte dos planos para o futuro.</p>
-      <div aria-label="Experiências atuais e próximos passos">
-        <div class="roadmap-row"><span class="roadmap-state done">No jogo</span><div><strong>Um lugar para começar</strong><p>Uma ilha no céu, cinco habitantes e um primeiro abrigo. Você desenha construções, acompanha obras e descobre o que seus moradores precisam.</p></div></div>
-        <div class="roadmap-row"><span class="roadmap-state active">Em expansão</span><div><strong>Trabalho e sustento</strong><p>Construir, produzir, aprender, trocar e cuidar da terra. O desenvolvimento aprofunda como essas atividades se encontram na vida de cada pessoa.</p></div></div>
-        <div class="roadmap-row"><span class="roadmap-state active">Em expansão</span><div><strong>Escolhas que têm história</strong><p>Lembranças, relações, recursos e compromissos influenciam os planos dos moradores. O objetivo é dar espaço a conflitos, recuperação e caminhos diferentes.</p></div></div>
-        <div class="roadmap-row"><span class="roadmap-state ">Mais adiante</span><div><strong>Famílias e gerações</strong><p>Laços familiares e mudanças ao longo da vida deverão abrir histórias que continuem além dos primeiros habitantes.</p></div></div>
-        <div class="roadmap-row"><span class="roadmap-state ">Mais adiante</span><div><strong>Um reino diante do mundo</strong><p>Leis, disputas de poder, relações com o exterior e ameaças deverão trazer novas decisões para a Coroa e para quem vive sob ela.</p></div></div>
+      <div class="modal-top"><p class="eyebrow">Diário de desenvolvimento</p><button class="modal-close" type="button" data-close-modal aria-label="Fechar devlog semanal" autofocus>×</button></div>
+      <h2 class="serif" id="devlog-title">O reino, semana a semana.</h2>
+      <p class="modal-lead">Das primeiras casas às escolhas de quem vive nelas. Acompanhe o que mudou em Kingdom e o que cada avanço significa para as suas histórias.</p>
+      <div aria-label="Artigos semanais de desenvolvimento, do mais recente ao mais antigo">
+        <details class="devlog-edition" open>
+          <summary><span class="devlog-date"><time datetime="2026-10-19">19 de outubro</time> — <time datetime="2026-10-20">20 de outubro de 2026</time> · semana em andamento</span><h3>Agora podemos perguntar: por quê?</h3></summary>
+          <article class="devlog-copy" aria-label="Devlog da semana de 19 de outubro">
+            <p>Uma pessoa abandona a pausa ao perceber perigo. Outra prefere procurar companhia. Para acompanhar essas escolhas, o painel Pessoas passou a reunir atividades, suas causas e as sugestões que você pode fazer ao rei. No dia <strong>20</strong>, essa consulta ganhou a camada que liga uma ação às lembranças, emoções e informações de quem a escolheu. A Coroa continua vendo apenas aquilo que o soberano sabe.</p>
+            <p>Os laços também ficaram mais ricos: amizade, romance, parentesco e relatos passam a participar das decisões. Uma fala pode expressar uma crença, esconder algo ou contradizer outra versão. Medo, raiva, ciúmes, paixão, luto e vergonha ganharam causas pessoais e expressões visíveis. Queremos que você consiga acompanhar o desenrolar de uma situação, inclusive quando duas pessoas entendem o mesmo encontro de maneiras diferentes.</p>
+            <p>No dia <strong>19</strong>, o Diário do Rei recebeu fichas de pessoas e sugestões por categoria. As ordens ganharam uma apresentação mais simples, com o chanceler no caminho da comunicação. Na cozinha, praticar prepara o agente para receitas mais difíceis, mas a experiência não ensina tudo automaticamente. A taverna também passou a depender das escolhas e dos meios de quem decide oferecê-la.</p>
+            <p>A defesa deu seus primeiros passos: arcos e espadas entraram na produção e no comércio; arqueiros podem usar torres e passarelas construídas, enquanto espadachins procuram entradas e passagens estreitas. A ilha ganhou ainda uma paleta mais ensolarada, gramado denso e árvores com verdes mais vivos.</p>
+            <p class="devlog-progress">Em desenvolvimento: as incursões ainda vêm de cenários de teste. As histórias sociais espontâneas e os resultados de combates prolongados seguem em avaliação; esta semana está registrada somente até 20/10.</p>
+          </article>
+        </details>
+        <details class="devlog-edition">
+          <summary><span class="devlog-date"><time datetime="2026-10-12">12</time> — <time datetime="2026-10-18">18 de outubro de 2026</time></span><h3>Vidas que continuam além de uma tarefa</h3></summary>
+          <article class="devlog-copy" aria-label="Devlog da semana de 12 de outubro">
+            <p>Esta semana aproximou o reino das histórias de família. A partir do dia <strong>12</strong>, avançaram as propostas de união, o conhecimento de parentesco, a gestação, o nascimento e o cuidado de crianças. Aceitar ajudar alguém passou a carregar uma responsabilidade pessoal: buscar comida, entregá-la e comunicar o resultado são partes da vida no mundo.</p>
+            <p>Entre os dias <strong>12 e 16</strong>, trabalhamos especialmente no que acontece quando uma vida termina. Uma encomenda pode ficar incompleta, uma carga pode estar nas mãos de quem morreu e alguém pode precisar assumir cuidados ou administrar o lar. Materiais e pertences conservam sua história; outra pessoa precisa encontrá-los, decidir agir e chegar até eles. A notícia da morte também depende de observação e comunicação.</p>
+            <p>O trabalho ganhou negociação e contexto. Necessidade de sustento, recursos conhecidos e reconhecimento influenciam as escolhas, enquanto uma encomenda admite acordo e desacordo. No dia <strong>15</strong>, forja, fundição e baús aprofundaram a cadeia de produção e armazenamento; ferramentas e camas passaram por verificações do ciclo de fabricação e uso.</p>
+            <p>No dia <strong>17</strong>, fome, cansaço, esforço e força física receberam um equilíbrio que deixa mais tempo para outras atividades. Construir também ficou mais legível: contornos em 3D, espaço entre lotes e obras, edição independente e demarcações visíveis fora do menu. As verificações de construção e reforma passaram a acompanhar o tempo normal do jogo.</p>
+            <p class="devlog-progress">A integração política e feudal continuou em testes. O fechamento dos casos de continuidade da vida não significa que todas as histórias familiares ou todos os conflitos do reino já estejam prontos.</p>
+          </article>
+        </details>
+        <details class="devlog-edition">
+          <summary><span class="devlog-date"><time datetime="2026-10-05">5</time> — <time datetime="2026-10-11">11 de outubro de 2026</time></span><h3>Uma nova ilha para chamar de lar</h3></summary>
+          <article class="devlog-copy" aria-label="Devlog da semana de 5 de outubro">
+            <p>A grande mudança desta semana foi a identidade do mundo. No dia <strong>10</strong>, Kingdom adotou uma ilha poligonal suspensa no céu: relva sobre uma base rochosa facetada, madeira acolhedora e formas simples. Estudos de ilha e vegetação começaram a chegar ao jogo. No dia <strong>11</strong>, essa direção evoluiu para uma fantasia cartunesca, com construções de silhueta forte, telhados pastel e uma interface de papel refinado.</p>
+            <p>Os habitantes também ganharam uma apresentação ilustrada, com animações de caminhada e pausa e cuidados para tornar seus contornos mais legíveis. Nas casas, enxaimel, pigmentos e famílias de coberturas ajudam a dar personalidade a cada construção. Muralhas receberam parapeitos, ameias e encontros mais claros com os prédios.</p>
+            <p>O castelo entrou como um projeto editável no dia <strong>10</strong>, para ser desenhado e construído ao longo da partida. Ao mesmo tempo, a construção deixou para trás a simulação física e os apoios automáticos. O foco passou a ser a clareza dos espaços, dos caminhos e do trabalho material que ergue cada peça.</p>
+            <p>No dia <strong>11</strong>, a ilha cresceu em largura e comprimento. Pedra e minério passaram a aparecer em grandes blocos finitos na superfície: os moradores retiram matéria desses blocos, que diminuem até liberar o chão. A ferramenta de escavação e, depois, a construção de estradas foram retiradas. Os trabalhos dos dias <strong>6 a 9</strong> também ajudaram a ajustar circulação, acesso às obras e continuidade de construções maiores.</p>
+            <p class="devlog-progress">O projeto de castelo e o novo visual já tinham entregas verificadas, mas a construção autônoma integral do castelo e o acabamento artístico completo continuavam em avaliação.</p>
+          </article>
+        </details>
+        <details class="devlog-edition">
+          <summary><span class="devlog-date"><time datetime="2026-09-28">28 de setembro</time> — <time datetime="2026-10-04">4 de outubro de 2026</time></span><h3>Da semente à mesa, do gesto à casa</h3></summary>
+          <article class="devlog-copy" aria-label="Devlog da semana de 28 de setembro">
+            <p>O trabalho deixou de caber numa função fixa. O marco de especialização emergente foi encerrado no dia <strong>28</strong>, consolidando a ideia de que produzir, aprender e buscar sustento nascem das condições e escolhas de cada pessoa. O reino começa a ganhar gente que faz coisas diferentes porque vive situações diferentes.</p>
+            <p>No dia <strong>29</strong>, o cultivo fechou um ciclo importante: transportar sementes, plantar, cuidar, esperar o crescimento, colher e levar a produção ao armazenamento. A mesma colheita pôde alimentar alguém e fornecer sementes para o próximo plantio. Solo observado, época favorável e experiência passaram a influenciar o resultado e as decisões de quem cuida da terra.</p>
+            <p>Também foram verificados cenários de cuidado animal. Alimentação, ovos, incubação e filhotes dependem de recursos e presença; comprar um animal exige encontro, pagamento e condução. Nos ensaios de fauna, coelhos procuram alimento e podem afetar o rendimento de uma plantação. Essas experiências ampliaram o mundo vivo sem colocar animais automaticamente em toda nova partida.</p>
+            <p>No dia <strong>2 de outubro</strong>, construir ficou mais próximo de um gesto: desenhar volumes, ajustar medidas e andares e compor espaços conectados. Coberturas, portas e circulação passaram por novas verificações para que o desenho pudesse virar uma obra executada pelos moradores. Estradas e andaimes também fizeram parte desses experimentos — soluções que seriam revistas na semana seguinte.</p>
+            <p class="devlog-progress">Este artigo registra a etapa histórica: agricultura e criação foram verificadas em cenas pequenas. Parte das ferramentas de construção desta semana foi posteriormente substituída pela direção visual e construtiva de outubro.</p>
+          </article>
+        </details>
+        <details class="devlog-edition">
+          <summary><span class="devlog-date"><time datetime="2026-09-21">21</time> — <time datetime="2026-09-27">27 de setembro de 2026</time></span><h3>O começo de um lugar habitado</h3></summary>
+          <article class="devlog-copy" aria-label="Devlog da semana de 21 de setembro">
+            <p>Os registros desta fase começam no dia <strong>21</strong>, com o encerramento do marco de moradias autônomas. Ter uma casa passou a fazer parte das necessidades e decisões dos habitantes. A interface de Pessoas, Ordens e Análise também recebeu uma base visual mais limpa para acompanhar a vida no povoado.</p>
+            <p>No dia <strong>22</strong>, o editor arquitetônico ganhou seus primeiros controles de cômodos, paredes e portas. Mover, girar, duplicar, excluir e desfazer ajudavam a experimentar o desenho antes de transformá-lo em matéria no mundo. O passo seguinte foi dar altura a esses espaços.</p>
+            <p>No dia <strong>23</strong>, salões de pedra, pisos elevados e uma escada de madeira foram verificados com transporte e instalação de materiais. A escada só passou a servir de caminho quando ficou pronta: uma pessoa pôde subir e descer pelo que havia sido construído. É uma das bases do tipo de reino que queremos, onde a arquitetura altera o que os moradores conseguem fazer.</p>
+            <p>Entre os dias <strong>25 e 27</strong>, o foco avançou para dano, reparo, desmontagem e reforma. O estado de uma construção passou a afetar seus caminhos, e consertá-la exigia visita e trabalho. Também ajustamos controles, câmera e continuidade das partidas, preparando o editor para experiências mais longas.</p>
+            <p class="devlog-progress">As entregas desta semana pertenciam a um povoado piloto. A arquitetura e sua apresentação continuaram mudando nas semanas seguintes; elementos da antiga simulação estrutural foram removidos em outubro.</p>
+          </article>
+        </details>
       </div>
-      <div class="modal-foot">O jogo segue em desenvolvimento; os planos podem evoluir.</div>
+      <div class="modal-foot">Edições organizadas de segunda a domingo, a partir dos registros datados do desenvolvimento. Atualizado em <time datetime="2026-10-20">20 de outubro de 2026</time>. Kingdom segue em desenvolvimento.</div>
     </div>
   </dialog>
 
