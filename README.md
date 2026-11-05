@@ -1,2 +1,2 @@
 # Project
-A project of deep social simulation on a medieval enviroment
+A project of a mmorpg
